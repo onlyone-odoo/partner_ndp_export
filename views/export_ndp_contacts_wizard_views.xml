@@ -6,9 +6,7 @@
         <field name="arch" type="xml">
             <form string="Exportar CSV para NDP">
                 <group>
-                    <field name="partner_ids" widget="many2many_tags"
-                           options="{'no_create': True}"
-                           domain="[('customer_rank', '>', 0)]"/>
+                    <field name="partner_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('customer_rank', '>', 0)]"/>
                 </group>
                 <footer>
                     <button name="generate_csv" string="Generar CSV" type="object" class="btn-primary"/>
@@ -26,10 +24,10 @@
     </record>
 
     <menuitem
-    id="menu_export_ndp_contacts_wizard"
-    name="Exportar CSV NDP Clientes"
-    parent="contacts.menu_contacts"
-    action="action_export_ndp_contacts_wizard"
-    sequence="10"
-    groups="stock.group_stock_manager"/>
+        id="menu_export_ndp_contacts_wizard"
+        name="Exportar CSV NDP Clientes"
+        parent="stock.menu_stock_config_settings"
+        action="action_export_ndp_contacts_wizard"
+        sequence="10"
+        groups="stock.group_stock_manager"/>
 </odoo>
