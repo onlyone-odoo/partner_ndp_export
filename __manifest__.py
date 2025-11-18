@@ -8,7 +8,7 @@
     "website": "https://onlyone.odoo.com/",
     "license": "AGPL-3",
     "category": "Sales",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.1",
     "depends": [
         "contacts",
         "sale",
