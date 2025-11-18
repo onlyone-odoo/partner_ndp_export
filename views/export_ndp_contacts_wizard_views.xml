@@ -26,10 +26,10 @@
     </record>
 
     <menuitem
-        id="menu_export_ndp_contacts_wizard"
-        name="Exportar CSV NDP Clientes"
-        parent="contacts.menu_contacts_configuration"
-        action="action_export_ndp_contacts_wizard"
-        sequence="10"
-        groups="stock.group_stock_manager"/>
+    id="menu_export_ndp_contacts_wizard"
+    name="Exportar CSV NDP Clientes"
+    parent="contacts.menu_contacts"
+    action="action_export_ndp_contacts_wizard"
+    sequence="10"
+    groups="stock.group_stock_manager"/>
 </odoo>
