@@ -26,7 +26,7 @@
     <menuitem
         id="menu_export_ndp_contacts_wizard"
         name="Exportar CSV NDP Clientes"
-        parent="stock.menu_stock_config_settings"
+        parent="contacts.res_partner_menu_config"
         action="action_export_ndp_contacts_wizard"
         sequence="10"
         groups="stock.group_stock_manager"/>
