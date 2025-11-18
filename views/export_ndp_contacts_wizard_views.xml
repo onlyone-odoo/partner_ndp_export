@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_export_ndp_contacts_wizard_form" model="ir.ui.view">
+        <field name="name">export.ndp.contacts.wizard.form</field>
+        <field name="model">export.ndp.contacts.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Exportar CSV para NDP">
+                <group>
+                    <field name="partner_ids" widget="many2many_tags"
+                           options="{'no_create': True}"
+                           domain="[('customer_rank', '>', 0)]"/>
+                </group>
+                <footer>
+                    <button name="generate_csv" string="Generar CSV" type="object" class="btn-primary"/>
+                    <button string="Cancelar" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_export_ndp_contacts_wizard" model="ir.actions.act_window">
+        <field name="name">Exportar CSV NDP Clientes</field>
+        <field name="res_model">export.ndp.contacts.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_export_ndp_contacts_wizard"
+              name="Exportar CSV NDP Clientes"
+              parent="contacts.menu_contacts_configuration"
+              action="action_export_ndp_contacts_wizard"
+              sequence="10"
+              groups="base.group_system"/>
+</odoo>
