@@ -15,6 +15,7 @@
         "account",
     ],
     "data": [
+        "security/ir.model.access.csv",
         "views/export_ndp_contacts_wizard_views.xml",
     ],
     "installable": True,
